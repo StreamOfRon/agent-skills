@@ -1,0 +1,17 @@
+{
+  "name": "@streamofron/agent-skills",
+  "version": "0.1.0",
+  "description": "Personal collection of agent skills for cross-platform use",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StreamOfRon/agent-skills.git"
+  },
+  "keywords": [
+    "agent-skills",
+    "hermes",
+    "claude",
+    "omp"
+  ],
+  "author": "StreamOfRon",
+  "license": "MIT"
+}
