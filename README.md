@@ -9,13 +9,13 @@ Personal collection of reusable agent skills for cross-platform compatibility.
 Install all skills globally:
 
 ```bash
-npx skills add StreamOfRon/agent-skills --all
+npx skills add -g StreamOfRon/agent-skills --all
 ```
 
 Install specific skills:
 
 ```bash
-npx skills add StreamOfRon/agent-skills -s skill-name
+npx skills add -g StreamOfRon/agent-skills -s skill-name
 ```
 
 ### Oh My Pi (OMP)
@@ -23,7 +23,7 @@ npx skills add StreamOfRon/agent-skills -s skill-name
 OMP uses the same `skills` CLI:
 
 ```bash
-npx skills add StreamOfRon/agent-skills --all
+npx skills add -g StreamOfRon/agent-skills --all
 ```
 
 Or symlink manually:
