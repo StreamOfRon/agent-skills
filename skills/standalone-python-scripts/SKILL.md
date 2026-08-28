@@ -17,9 +17,11 @@ Guidelines for writing single-file Python scripts that use PEP 723 inline metada
 
 ## Procedure
 
-1. **Minimize dependencies** — only add external packages that clearly save time or provide essential functionality. Prefer standard library when reasonable.
+1. **Check Python version support** — before setting `requires-python`, verify the target version is not end-of-life and has at least one year until EOL. Check https://devguide.python.org/versions/ for current status. Only target older versions if explicitly requested by the user.
 
-2. **Add PEP 723 inline metadata** — declare dependencies at the top of the script using the `# /// script` block format:
+2. **Minimize dependencies** — only add external packages that clearly save time or provide essential functionality. Prefer standard library when reasonable.
+
+3. **Add PEP 723 inline metadata** — declare dependencies at the top of the script using the `# /// script` block format:
    ```python
    # /// script
    # requires-python = ">=3.12"
@@ -30,17 +32,17 @@ Guidelines for writing single-file Python scripts that use PEP 723 inline metada
    # ///
    ```
 
-3. **Use the uv shebang** — when the script has non-stdlib dependencies, use:
+4. **Use the uv shebang** — when the script has non-stdlib dependencies, use:
    ```python
    #!/usr/bin/env -S uv run --script
    ```
    This allows direct execution: `./script.py`
 
-4. **Prefer Click for argument parsing** — when the script needs CLI arguments, use Click over argparse or other libraries.
+5. **Prefer Click for argument parsing** — when the script needs CLI arguments, use Click over argparse or other libraries.
 
-5. **Prefer Arrow for date/time** — when the script handles dates or times, use Arrow over datetime or other libraries.
+6. **Prefer Arrow for date/time** — when the script handles dates or times, use Arrow over datetime or other libraries.
 
-6. **Make executable** — after creating the script, run `chmod +x script.py` to make it directly executable.
+7. **Make executable** — after creating the script, run `chmod +x script.py` to make it directly executable.
 
 ## Example
 
@@ -87,6 +89,7 @@ After creating the script:
 
 Quick checklist:
 ```
+Is the Python version still supported (not EOL, >1 year to EOL)?
 Does the script have a shebang line?
 Is the PEP 723 metadata block present and valid?
 Are dependencies minimal and justified?
