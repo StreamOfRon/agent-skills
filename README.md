@@ -50,6 +50,8 @@ ln -s ~/agent-skills/skills/* ~/.claude/skills/
 
 ## Available Skills
 
+- `code-comments` — Use when adding, modifying, or reviewing comments in source code
+- `commit-messages` — Use when writing, reviewing, or editing git commit messages
 - `install-missing-tool` — Use when a shell command is not found or a required tool is missing from the agent's environment
 - `python-project-guidelines` — Use when starting a new Python project, scaffolding a Python application, or setting up Python project structure with pyproject.toml
 - `standalone-python-scripts` — Use when creating standalone Python scripts with uv; the script is a single file for standalone execution rather than a larger project with pyproject.toml
