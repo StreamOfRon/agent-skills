@@ -51,6 +51,7 @@ ln -s ~/agent-skills/skills/* ~/.claude/skills/
 ## Available Skills
 
 - `install-missing-tool` — Use when a shell command is not found or a required tool is missing from the agent's environment
+- `python-project-guidelines` — Use when starting a new Python project, scaffolding a Python application, or setting up Python project structure with pyproject.toml
 - `standalone-python-scripts` — Use when creating standalone Python scripts with uv; the script is a single file for standalone execution rather than a larger project with pyproject.toml
 - `version-aware-recommendations` — Use when recommending, installing, deploying, or pinning software versions, or listing features of external software
 
