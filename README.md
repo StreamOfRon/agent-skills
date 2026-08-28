@@ -50,7 +50,7 @@ ln -s ~/agent-skills/skills/* ~/.claude/skills/
 
 ## Available Skills
 
-*No skills yet — add your first skill following the conventions in [AGENTS.md](AGENTS.md)*
+- `version-aware-recommendations` — Use when recommending, installing, deploying, or pinning software versions, or listing features of external software
 
 ## Structure
 
