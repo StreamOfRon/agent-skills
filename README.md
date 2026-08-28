@@ -50,6 +50,7 @@ ln -s ~/agent-skills/skills/* ~/.claude/skills/
 
 ## Available Skills
 
+- `install-missing-tool` — Use when a shell command is not found or a required tool is missing from the agent's environment
 - `version-aware-recommendations` — Use when recommending, installing, deploying, or pinning software versions, or listing features of external software
 
 ## Structure
