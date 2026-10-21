@@ -56,6 +56,7 @@ ln -s ~/agent-skills/skills/* ~/.claude/skills/
 - `python-project-guidelines` — Use when starting a new Python project, scaffolding a Python application, or setting up Python project structure with pyproject.toml
 - `standalone-python-scripts` — Use when creating standalone Python scripts with uv; the script is a single file for standalone execution rather than a larger project with pyproject.toml
 - `version-aware-recommendations` — Use when recommending, installing, deploying, or pinning software versions, or listing features of external software
+- `confluence-formatting` — Use when formatting, translating, or structuring documentation for Confluence pages. Converts Markdown to Confluence Page Format (HTML with Confluence-specific markup). Handles headings, tables, lists, rich text, macros, panels, anchors, and labels.
 
 ## Structure
 
