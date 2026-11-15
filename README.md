@@ -53,6 +53,7 @@ ln -s ~/agent-skills/skills/* ~/.claude/skills/
 - `code-comments` — Use when adding, modifying, or reviewing comments in source code
 - `commit-messages` — Use when writing, reviewing, or editing git commit messages
 - `install-missing-tool` — Use when a shell command is not found or a required tool is missing from the agent's environment
+- `kubectl-readonly` — Use when running any kubectl command; read-only operations MUST go through kubectl-readonly (auto-approved), plain kubectl is not auto-approved
 - `python-project-guidelines` — Use when starting a new Python project, scaffolding a Python application, or setting up Python project structure with pyproject.toml
 - `standalone-python-scripts` — Use when creating standalone Python scripts with uv; the script is a single file for standalone execution rather than a larger project with pyproject.toml
 - `version-aware-recommendations` — Use when recommending, installing, deploying, or pinning software versions, or listing features of external software
