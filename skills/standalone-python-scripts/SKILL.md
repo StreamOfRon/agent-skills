@@ -19,7 +19,7 @@ Guidelines for writing single-file Python scripts that use PEP 723 inline metada
 
 1. **Check Python version support** — before setting `requires-python`, verify the target version is not end-of-life and has at least one year until EOL. Check https://devguide.python.org/versions/ for current status. Only target older versions if explicitly requested by the user.
 
-2. **Minimize dependencies** — only add external packages that clearly save time or provide essential functionality. Prefer standard library when reasonable.
+2. **Keep dependencies purposeful** — don't add more packages than the script needs, but use an established library rather than hand-rolling what it already does. A short dependency list built on well-known libraries beats a zero-dependency script full of reinvented code.
 
 3. **Add PEP 723 inline metadata** — declare dependencies at the top of the script using the `# /// script` block format:
    ```python
@@ -38,9 +38,9 @@ Guidelines for writing single-file Python scripts that use PEP 723 inline metada
    ```
    This allows direct execution: `./script.py`
 
-5. **Prefer Click for argument parsing** — when the script needs CLI arguments, use Click over argparse or other libraries.
+5. **Prefer Click for argument parsing** — when the script needs CLI arguments, use Click over argparse or hand-rolled flag handling.
 
-6. **Prefer Arrow for date/time** — when the script handles dates or times, use Arrow over datetime or other libraries.
+6. **Prefer Arrow for date/time** — when the script handles dates or times, use Arrow over datetime or manual offset math.
 
 7. **Make executable** — after creating the script, run `chmod +x script.py` to make it directly executable.
 
@@ -74,7 +74,8 @@ if __name__ == "__main__":
 
 ## Pitfalls
 
-- **Over-engineering:** Don't add dependencies for trivial tasks. If `datetime` works, don't add Arrow. If `argparse` suffices, don't add Click.
+- **Reinventing the wheel:** If the script parses CLI arguments, use Click — not argparse or hand-rolled flag handling. If it handles dates or times, use Arrow — not datetime or manual offset math. This holds even for small scripts.
+- **Dependency creep:** Don't add a package for what the standard library handles in a few lines (`json`, `pathlib`, `subprocess`).
 - **Missing shebang:** Without `#!/usr/bin/env -S uv run --script`, the script won't run directly with `./script.py`.
 - **Invalid metadata block:** The `# /// script` block must be at the top and follow PEP 723 format exactly.
 - **Forgetting to chmod:** The script needs execute permissions (`chmod +x`) to run directly.
