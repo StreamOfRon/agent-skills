@@ -1,6 +1,6 @@
 ---
 name: standalone-python-scripts
-description: Use when creating standalone Python scripts with uv; the script is a single file for standalone execution rather than a larger project with pyproject.toml
+description: Use when writing standalone Python scripts — helper, utility, one-off scripts even mid-task, CLI tools, automation — or making a script reusable for future sessions. Not pyproject.toml projects.
 ---
 
 # Standalone Python Scripts
@@ -11,7 +11,11 @@ Guidelines for writing single-file Python scripts that use PEP 723 inline metada
 
 - Creating a standalone Python script (single file, no pyproject.toml)
 - Writing a CLI tool or utility script
-- Building a quick automation or one-off script with external dependencies
+- **Writing a helper or one-off Python script as part of another task** — the skill applies whether the script is the task itself or a side-product of it; once you decide to write a Python script, load this before writing code
+- **Converting an existing ad-hoc script into a reusable one** for future agent sessions
+- Building quick automation with external dependencies
+
+**Common miss:** skipping this skill because the script is "just a helper for the current task" — helper scripts run standalone too, and that's exactly where PEP 723 + uv keep them self-contained.
 
 **NOT for:** larger Python projects with multiple modules, packages, or a pyproject.toml/setup.py structure.
 

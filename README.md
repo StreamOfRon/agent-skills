@@ -55,7 +55,7 @@ ln -s ~/agent-skills/skills/* ~/.claude/skills/
 - `install-missing-tool` — Use when a shell command is not found or a required tool is missing from the agent's environment
 - `kubectl-readonly` — Use before ANY kubectl or Kubernetes work — pods, cluster, kubeconfig — including reflexive checks like 'kubectl config current-context' or 'kubectl get ns'. Plain kubectl is not approved
 - `python-project-guidelines` — Use when starting a new Python project, scaffolding a Python application, or setting up Python project structure with pyproject.toml
-- `standalone-python-scripts` — Use when creating standalone Python scripts with uv; the script is a single file for standalone execution rather than a larger project with pyproject.toml
+- `standalone-python-scripts` — Use when writing standalone Python scripts — helper, utility, one-off scripts even mid-task, CLI tools, automation — or making a script reusable for future sessions. Not pyproject.toml projects.
 - `version-aware-recommendations` — Use when recommending, installing, deploying, or pinning software versions, or listing features of external software
 - `confluence-formatting` — Use when formatting, translating, or structuring documentation for Confluence pages. Converts Markdown to Confluence Page Format (HTML with Confluence-specific markup). Handles headings, tables, lists, rich text, macros, panels, anchors, and labels.
 
